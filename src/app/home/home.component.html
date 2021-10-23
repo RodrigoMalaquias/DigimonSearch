@@ -1,0 +1,19 @@
+<div id="logo">
+    <img src="https://i.pinimg.com/originals/ca/5b/a7/ca5ba7d121989a03a9e22518a3ccaab1.png" alt="">
+</div>
+
+
+
+<div class="input-group mb-3" id="searchField">
+    <input type="text" [(ngModel)]="name" class="form-control" placeholder="Digite o nome do digimon" 
+    aria-label="Recipient's username" aria-describedby="basic-addon2" (keyup.enter) = "searchDigimon()">
+    <div class="input-group-append">
+      <button class="btn btn-info" type="button" (click) = "searchDigimon()">Buscar</button>
+    </div>
+</div>
+
+<div id="apiResponse">
+    <img src="{{digimon.img}}" alt="">
+</div>
+
+

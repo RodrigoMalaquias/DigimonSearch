@@ -1,0 +1,21 @@
+#logo{
+    text-align: center;
+    margin-top: 10%;
+}
+
+#logo img{
+    width: 400px;
+}
+
+#searchField{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#apiResponse{
+    text-align: center;
+}
+
+#apiResponse img{
+    width: 400px;
+}
