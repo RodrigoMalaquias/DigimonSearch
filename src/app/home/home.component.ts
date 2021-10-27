@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { digimon } from './digimon'
+import { digimon } from '../shared/digimon'
 
 @Component({
   selector: 'app-home',
@@ -16,6 +16,13 @@ export class HomeComponent implements OnInit {
     img: "",
     level:""
   };
+  
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  ngOnInit(): void {
+  }
 
   searchDigimon(){
     this.dataApi = null
@@ -25,7 +32,7 @@ export class HomeComponent implements OnInit {
         this.updateDigimon()
       },
       (err) => {
-        console.log(`Erro ao consumir API -> ${err.error.ErrorMsg}`)
+        console.log(`Error consuming API -> ${err.error.ErrorMsg}`)
         this.updateDigimon()
       }
     )
@@ -40,13 +47,6 @@ export class HomeComponent implements OnInit {
     else{
       this.digimon.img = "https://seranking.com/blog/wp-content/uploads/2021/01/404_01-min.jpg"
     }
-  }
-
-  constructor(
-    private http: HttpClient
-  ) { }
-
-  ngOnInit(): void {
   }
 
 }

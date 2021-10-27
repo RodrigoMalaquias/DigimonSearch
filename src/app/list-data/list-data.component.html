@@ -1,0 +1,25 @@
+<div class="container">
+    <div id="contentList">
+      <h4 class="text-warning">Digimons</h4>
+      <div> </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of listDigimon | paginate: { itemsPerPage: amount, currentPage: page }">
+            <td>{{a.name}}</td>
+            <td>{{a.level}}</td>
+            <td><img id="imageItem" src={{a.img}} alt=""></td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
+    <div id="pageControls" class="text-right">
+      <pagination-controls (pageChange)="handlePageChange($event)"></pagination-controls>
+    </div>
+  </div>

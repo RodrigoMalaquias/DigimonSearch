@@ -9,6 +9,10 @@ import { RouterModule, Routes } from '@angular/router';
   { 
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
+  { 
+    path: 'listData',
+    loadChildren:() => import("./list-data/list-data.module").then(m => m.ListDataModule)
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,15 @@
+th, td {
+    text-align: left;
+}
+
+#contentList{
+    margin-top: 5%;
+}
+
+#imageItem{
+    width: 100px;
+}
+
+#pageControls{
+    text-align: center;
+}
